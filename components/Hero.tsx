@@ -27,10 +27,21 @@ export function Hero() {
             <Icon name="arrow-right" className="size-3.5" />
           </Link>
 
+          {/*
+            The brand name belongs in the H1. Without it the page's strongest
+            heading never said what the product is called, which — given the
+            name is one letter from Fig's own `figterm` — left engines to guess,
+            and they guessed Fig. "Autocomplete superpowers" keeps its place as
+            the lede directly underneath.
+          */}
           <h1 className="mt-7 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-            The terminal with{" "}
-            <span className="text-gradient">autocomplete superpowers</span>
+            FigyTerm — the open-source{" "}
+            <span className="text-gradient">Fig alternative</span>
           </h1>
+
+          <p className="mx-auto mt-5 max-w-2xl text-lg font-medium text-fg sm:text-xl">
+            The terminal with autocomplete superpowers.
+          </p>
 
           {/* Named platforms, not just "cross-platform" — the three words are
               what someone arriving from a search is actually looking for. */}
@@ -51,7 +62,7 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">
             IDE-level completions for{" "}
             <strong className="font-medium text-fg">git</strong>,{" "}
             <strong className="font-medium text-fg">docker</strong>,{" "}

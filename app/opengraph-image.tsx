@@ -57,7 +57,7 @@ export default async function OpengraphImage() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              fontSize: 74,
+              fontSize: 64,
               lineHeight: 1.03,
               fontWeight: 700,
               color: "#ecedf2",
@@ -65,18 +65,18 @@ export default async function OpengraphImage() {
               maxWidth: 950,
             }}
           >
-            The terminal with
+            FigyTerm — the
           </div>
           <div
             style={{
-              fontSize: 74,
+              fontSize: 64,
               lineHeight: 1.03,
               fontWeight: 700,
               color: "#818cf8",
               letterSpacing: -2.4,
             }}
           >
-            autocomplete superpowers
+            open-source Fig alternative
           </div>
           <div
             style={{
@@ -86,8 +86,8 @@ export default async function OpengraphImage() {
               maxWidth: 900,
             }}
           >
-            IDE-level completions for git, docker and npm — plus an editor, an
-            API client and a Claude Code window. Local, open source, free.
+            IDE-level terminal autocomplete, Fig-compatible specs, fully
+            local. Plus an editor, an API client and a Claude Code window.
           </div>
         </div>
 

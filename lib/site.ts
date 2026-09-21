@@ -1,16 +1,37 @@
 export const site = {
   name: "FigyTerm",
   /*
-   * The home page <title>. Kept on the autocomplete wording deliberately: it
-   * is the phrase the site already ranks for, and "workbench" — the wider
-   * story the rest of the site tells — is a positioning line, not a search
-   * term anyone types.
+   * The home page <title>, and the hardest-working string on the site.
+   *
+   * It leads on "Fig alternative" rather than on the product's own phrasing
+   * because of a name collision that costs real traffic: "FigyTerm" is one
+   * letter from `figterm`, Fig's own shell shim, so search engines and LLMs
+   * asked about FigyTerm reliably answer about the discontinued Fig instead.
+   * Naming the category in the title is what separates the two.
+   *
+   * Kept under ~60 characters with the brand first, so it survives Google's
+   * truncation intact.
    */
-  tagline: "The cross-platform terminal with autocomplete superpowers",
+  tagline: "Open-source Fig alternative with IDE autocomplete",
+  /**
+   * The meta description. Deliberately ~160 characters — past that Google
+   * truncates, and the tail is wasted. The full pitch lives in
+   * `longDescription`, where structured data has no such limit.
+   */
   description:
-    "FigyTerm is a free, open-source terminal for macOS, Linux and Windows with IDE-level autocomplete, a built-in code editor with git and language servers, an API client, a Claude Code window, a drawing board and an embedded browser — all fully local.",
+    "The free, open-source Fig alternative: a cross-platform terminal with IDE-level autocomplete. Fig-compatible specs, fully local, no account. macOS, Linux, Windows.",
+  longDescription:
+    "FigyTerm is a free, open-source terminal for macOS, Linux and Windows with IDE-level autocomplete, a built-in code editor with git and language servers, an API client, a Claude Code window, a drawing board and an embedded browser — all fully local. It reads Fig's completion spec format, making it a direct alternative to Fig, whose standalone autocomplete was discontinued after the AWS acquisition.",
   shortDescription:
     "A free, open-source terminal for macOS, Linux and Windows with IDE-level autocomplete and a built-in editor, API client and Claude Code window.",
+  /**
+   * The statement that exists purely to break the `FigyTerm` / `figterm`
+   * confusion. Emitted as `disambiguatingDescription` in the structured data,
+   * where schema.org defines it for exactly this job, and stated in prose on
+   * /fig-alternative so a crawler finds it in both forms.
+   */
+  disambiguation:
+    "FigyTerm is an independent open-source project and is not Fig, figterm, or Amazon Q Developer CLI. Fig was acquired by AWS in 2023 and its standalone autocomplete app was sunset on 1 September 2024. FigyTerm is unaffiliated with Fig or Amazon Web Services, and reads the same completion spec format Fig used.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://figyterm.code4mk.org",
   repo: "https://github.com/code4mk/figyterm",
   releases: "https://github.com/code4mk/figyterm/releases",
@@ -26,9 +47,25 @@ export const site = {
     linux:
       "curl -fsSL https://raw.githubusercontent.com/code4mk/figyterm/main/install-linux.sh | sh",
   },
+  /*
+   * Ordered by intent, not by volume. The first block is the name-collision
+   * cluster — the searches where FigyTerm currently loses to Fig itself — and
+   * the misspellings people actually type when they half-remember the name.
+   */
   keywords: [
     "figyterm",
+    "figy term",
     "fig alternative",
+    "fig successor",
+    "fig terminal alternative",
+    "open source fig replacement",
+    "fig autocomplete alternative",
+    "terminal with fig-style autocomplete",
+    "fig compatible completion specs",
+    "figterm alternative",
+    "fig shut down alternative",
+    "what replaced fig terminal",
+    "amazon q developer cli alternative",
     "fig.io alternative",
     "best macOS terminal",
     "macOS terminal app",

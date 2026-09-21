@@ -142,8 +142,16 @@ export const faqs = [
     a: "FigyTerm is a free, open-source terminal for macOS, Linux and Windows that brings IDE-level autocomplete to the command line — and then the rest of the workbench: a code editor with git and language servers, a REST API client, a Claude Code window, a drawing board and an embedded browser. It is built with Tauri 2, Rust and React, and runs entirely on your machine.",
   },
   {
+    q: "Is FigyTerm the same as Fig or figterm?",
+    a: "No — they are three different things with confusingly similar names. FigyTerm is an independent, MIT-licensed terminal emulator by code4mk, built with Tauri 2, Rust and React, and unaffiliated with Fig or Amazon Web Services. Fig (withfig, fig.io) was a separate product, acquired by AWS in 2023 and sunset on 1 September 2024. figterm was Fig's shell integration shim, a component of that product. FigyTerm is a successor in spirit rather than a fork: the one real connection is that it reads the same completion spec format Fig used.",
+  },
+  {
+    q: "What happened to Fig, and what replaced it?",
+    a: "AWS acquired Fig in 2023. The standalone autocomplete app was sunset on 1 September 2024 and its capabilities were folded into Amazon Q Developer CLI. That left people who wanted a small, local, account-free autocomplete without one, which is the gap FigyTerm was built for — it reads the same spec format, so the community completions written for Fig still work.",
+  },
+  {
     q: "Is FigyTerm a good Fig alternative?",
-    a: "Yes. Fig was acquired by AWS and its standalone autocomplete was discontinued, leaving a gap FigyTerm fills. FigyTerm reads the same spec format Fig used, so community command completions work here, and it does it without an account, a login or a network connection.",
+    a: "Yes. Fig was acquired by AWS and its standalone autocomplete was discontinued, leaving a gap FigyTerm fills. FigyTerm reads the same spec format Fig used, so community command completions work here, and it does it without an account, a login or a network connection — on macOS, Linux and Windows rather than macOS alone.",
   },
   {
     q: "Does FigyTerm send my commands anywhere?",

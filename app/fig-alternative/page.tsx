@@ -48,7 +48,7 @@ const story = [
   {
     icon: "cross",
     title: "What happened",
-    body: "Fig was acquired by AWS. The standalone autocomplete product was discontinued, and the workflow a lot of people had built their day around went with it.",
+    body: "AWS acquired Fig in 2023. The standalone autocomplete app was sunset on 1 September 2024 and folded into Amazon Q Developer CLI, and the workflow a lot of people had built their day around went with it.",
   },
   {
     icon: "sparkles",
@@ -78,6 +78,8 @@ const differences = [
 
 const figFaqs = faqs.filter((faq) =>
   [
+    "Is FigyTerm the same as Fig or figterm?",
+    "What happened to Fig, and what replaced it?",
     "Is FigyTerm a good Fig alternative?",
     "What is FigyTerm?",
     "Does FigyTerm send my commands anywhere?",
@@ -139,6 +141,69 @@ export default function FigAlternativePage() {
             </li>
           ))}
         </ol>
+      </Section>
+
+      {/*
+        Three products whose names are within a letter of each other. Stated
+        plainly and in one place, because the alternative is what happens now:
+        ask a search engine or an assistant about FigyTerm and it answers about
+        Fig. The same text is served at /llms.txt and as
+        `disambiguatingDescription` in the structured data.
+      */}
+      <Section>
+        <SectionHeading
+          eyebrow="Not the same thing"
+          title="FigyTerm, Fig and figterm are three different things"
+          body="The names are one letter apart, which is enough to send most searches — and most AI assistants — to the wrong one."
+        />
+
+        <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-edge bg-edge md:grid-cols-3">
+          {[
+            {
+              name: "FigyTerm",
+              what: "This project",
+              body: "An independent, MIT-licensed terminal emulator by code4mk, built with Tauri 2, Rust and React. Active, and unaffiliated with Fig or Amazon Web Services.",
+              live: true,
+            },
+            {
+              name: "Fig",
+              what: "withfig, fig.io",
+              body: "A different product. Acquired by AWS in 2023; the standalone autocomplete app was sunset on 1 September 2024 and folded into Amazon Q Developer CLI.",
+              live: false,
+            },
+            {
+              name: "figterm",
+              what: "A part of Fig",
+              body: "Fig's shell integration shim — a component of that product, not a product of its own. Unrelated to FigyTerm beyond the similar name.",
+              live: false,
+            },
+          ].map((item) => (
+            <li key={item.name} className="bg-panel/70 p-6">
+              <div className="flex items-center gap-2.5">
+                <span
+                  className={`size-2 rounded-full ${
+                    item.live ? "bg-term-green" : "bg-edge-strong"
+                  }`}
+                />
+                <h3 className="font-mono text-sm font-medium text-fg">
+                  {item.name}
+                </h3>
+                <span className="ml-auto text-[11px] uppercase tracking-wider text-fg-subtle">
+                  {item.what}
+                </span>
+              </div>
+              <p className="mt-3.5 text-sm leading-relaxed text-fg-muted">
+                {item.body}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-fg-subtle">
+          FigyTerm is a successor in spirit to Fig, not a fork of it. The one
+          real connection is the file format: FigyTerm reads Fig&apos;s
+          completion spec format, so specs written for Fig work here unchanged.
+        </p>
       </Section>
 
       <Section>

@@ -36,7 +36,7 @@ export function website(): Node {
     "@id": ids.website,
     url: site.url,
     name: site.name,
-    description: site.description,
+    description: site.longDescription,
     inLanguage: "en-US",
     publisher: { "@id": ids.author },
   };
@@ -47,11 +47,17 @@ export function softwareApplication(): Node {
     "@type": "SoftwareApplication",
     "@id": ids.app,
     name: site.name,
-    alternateName: [
-      "FigyTerm Terminal",
-      "Fig alternative for macOS, Linux and Windows",
-    ],
-    description: site.description,
+    alternateName: ["FigyTerm Terminal", "Figy Term"],
+    description: site.longDescription,
+    /*
+     * schema.org defines this field for exactly the problem FigyTerm has: a
+     * name one letter from `figterm`, which sends engines and LLMs to the
+     * discontinued Fig instead. Stating the difference in the field built for
+     * it is stronger than hoping prose carries it.
+     */
+    disambiguatingDescription: site.disambiguation,
+    keywords: site.keywords.join(", "),
+    sameAs: [site.repo, site.releases],
     applicationCategory: "DeveloperApplication",
     applicationSubCategory: "Terminal Emulator",
     operatingSystem: ["macOS 12 or later", "Linux", "Windows 10 1809 or later"],
