@@ -2,12 +2,11 @@
   "name": "figyterm-web",
   "version": "0.1.0",
   "private": true,
-  "description": "Marketing site for FigyTerm — a modern, intelligent terminal for macOS.",
+  "description": "Marketing site for FigyTerm — a modern, intelligent terminal for macOS, Linux and Windows.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
