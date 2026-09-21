@@ -10,7 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   const pages = routes.map((route) => ({
-    url: `${site.url}${route.href === "/" ? "/" : route.href}`,
+    // No trailing slash on the root: `alternates.canonical` resolves to the
+    // bare origin, and a sitemap that disagrees with the canonical it points
+    // at is asking the crawler to pick.
+    url: `${site.url}${route.href === "/" ? "" : route.href}`,
     lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
