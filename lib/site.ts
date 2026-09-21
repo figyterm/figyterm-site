@@ -91,6 +91,55 @@ export const site = {
     "postman alternative",
     "claude code terminal",
     "terminal with excalidraw",
+
+    /* Competitor-alternative cluster. High intent: whoever types one of these
+       has already decided to switch and is choosing what to switch to. */
+    "open source warp alternative",
+    "warp terminal free alternative",
+    "iterm2 alternative linux",
+    "iterm2 alternative windows",
+    "hyper terminal alternative",
+    "tabby terminal alternative",
+    "kitty terminal alternative",
+    "alacritty alternative with autocomplete",
+    "windows terminal alternative",
+    "best terminal emulator 2026",
+    "modern terminal emulator",
+
+    /* API client cluster. "postman" itself is a navigational brand query and
+       unwinnable; everything below is the same person one modifier later. */
+    "postman alternative offline",
+    "postman alternative open source",
+    "lightweight postman alternative",
+    "insomnia alternative",
+    "bruno api client alternative",
+    "api client without account",
+    "offline rest client",
+    "rest client desktop app",
+    "http client for developers",
+
+    /* Panel-specific long tail — one cluster per feature page. */
+    "claude code gui",
+    "claude code window",
+    "ai agent in terminal",
+    "terminal with git client",
+    "git diff viewer app",
+    "terminal with language server",
+    "lsp in terminal editor",
+    "excalidraw desktop app",
+    "diagram tool for developers",
+    "terminal with embedded browser",
+    "fuzzy command history search",
+    "terminal system monitor",
+
+    /* Problem-shaped queries — how people describe the need before they know
+       the product category. */
+    "how to get autocomplete in terminal",
+    "terminal that suggests commands",
+    "edit files without leaving terminal",
+    "terminal with everything built in",
+    "private terminal no telemetry",
+    "terminal with no account required",
     "edit files in terminal",
   ],
 } as const;

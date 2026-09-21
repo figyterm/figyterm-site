@@ -204,6 +204,39 @@ export default function FigAlternativePage() {
           real connection is the file format: FigyTerm reads Fig&apos;s
           completion spec format, so specs written for Fig work here unchanged.
         </p>
+
+        {/* Cited rather than asserted. The dates below are the load-bearing
+            claim on this page, and a reader should be able to check them
+            without taking our word for it. */}
+        <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-fg-subtle">
+          <span>Sources:</span>
+          <a
+            href="https://github.com/withfig/autocomplete"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-edge-strong underline-offset-4 transition-colors hover:text-fg-muted"
+          >
+            Fig&apos;s completion spec repository
+          </a>
+          <span aria-hidden="true">·</span>
+          <a
+            href="https://github.com/aws/amazon-q-developer-cli-autocomplete"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-edge-strong underline-offset-4 transition-colors hover:text-fg-muted"
+          >
+            Amazon Q Developer CLI autocomplete
+          </a>
+          <span aria-hidden="true">·</span>
+          <a
+            href="https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-edge-strong underline-offset-4 transition-colors hover:text-fg-muted"
+          >
+            AWS documentation
+          </a>
+        </p>
       </Section>
 
       <Section>
